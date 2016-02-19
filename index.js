@@ -20,7 +20,8 @@ function cjs_update() {
     });
 
     Array.from(document.querySelectorAll('.details .message blockquote p')).forEach(function(e) {
-        e.innerHTML = e.innerHTML.replace(/:AllenApproves:/g, '<img src="https://en.gravatar.com/userimage/101328657/c9adf0e5b944f4e03a13366d0df3140f.png?size=120">');
+        e.innerHTML = e.innerHTML.replace(/:AllenApproves:/g, '<img src="https://en.gravatar.com/userimage/101328657/c9adf0e5b944f4e03a13366d0df3140f.png?size=120">')
+        .replace(/:AllenNoLikey:/g, '<img src="https://cloud.githubusercontent.com/assets/3425521/13171538/4e1377da-d72e-11e5-89da-36472a57a354.png">');
     });
 
     appendAllen();
