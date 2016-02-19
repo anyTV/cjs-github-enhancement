@@ -10,9 +10,7 @@ function cjs_update() {
 
     Array.from(document.querySelectorAll('.comment:last-child .comment-body.js-comment-body')).forEach(function (elem) {
         if(elem.innerText.match(/\!\bfix\b|\!\bresolve\b/g)) {
-            console.log(elem.innerText)
-            elem.style.color = '#fff';
-            elem.style.background = '#ea3311';
+            elem.style.background = '#ffcdd2';
         }
     });
     
