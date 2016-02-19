@@ -21,6 +21,10 @@ function cjs_update() {
         e.innerHTML = e.innerHTML.replace(/:AllenApproves:/g, '<img src="https://en.gravatar.com/userimage/101328657/c9adf0e5b944f4e03a13366d0df3140f.png?size=120">');
     });
 
+    Array.from(document.querySelectorAll('.details .message blockquote p')).forEach(function(e) {
+        e.innerHTML = e.innerHTML.replace(/:AllenApproves:/g, '<img src="https://en.gravatar.com/userimage/101328657/c9adf0e5b944f4e03a13366d0df3140f.png?size=120">');
+    });
+
     appendAllen();
 }
 
