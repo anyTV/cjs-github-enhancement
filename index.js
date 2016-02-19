@@ -45,4 +45,4 @@ function appendAllen() {
 }
 
 cjs_update();
-$(document).on('ajaxComplete', function () { setTimeout(cjs_update, 250); });
+$(document).on('ajaxSuccess', function () { setTimeout(cjs_update, 250); });
