@@ -29,7 +29,8 @@ function cjs_update() {
 }
 
 function allenApproves() {
-    $('#new_comment_field').val(':AllenApproves:');
+	var cmt = $('#new_comment_field').val();
+    $('#new_comment_field').val(cmt + (cmt ? '\n' : '') + ':AllenApproves:');
     $('#partial-new-comment-form-actions').children().get(0).click()
 }
 
