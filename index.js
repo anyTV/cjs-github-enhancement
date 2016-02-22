@@ -28,20 +28,32 @@ function cjs_update() {
     appendAllen();
 }
 
-function allenApproves() {
+function allen(type) {
     var cmt = $('#new_comment_field').val();
-    $('#new_comment_field').val(cmt + (cmt ? '\n' : '') + ':AllenApproves:');
-    $('#partial-new-comment-form-actions').children().get(1).click()
+    var verdict = ':AllenApproves:';
+
+    switch (type) {
+        case 'deny':
+            verdict = ':AllenNoLikey:';
+            break;
+    }
+
+    $('#new_comment_field').val(cmt + (cmt ? '\n' : '') + verdict);
+    $('#partial-new-comment-form-actions').children().get(2).click();
 }
 
 function appendAllen() {
-    if ($('#allenapproves').length) {
+    if ($('#allenapproves').length || $('#allendenies').length) {
         return;    
     }
     
     var approve = $($('#partial-new-comment-form-actions').children().get(0))
-        .clone().prop('tabindex', '5').html('Approve').prop('id', 'allenapproves').click(allenApproves);
+        .clone().prop('tabindex', '5').html('Approve').prop('id', 'allenapproves').click(allen.bind(null, 'approve'));
+    var deny = $($('#partial-new-comment-form-actions').children().get(0))
+        .clone().prop('tabindex', '5').html('Deny').prop('id', 'allendenies')
+        .toggleClass('btn-danger').toggleClass('btn-primary').click(allen.bind(null, 'deny'));
         
+    $("#partial-new-comment-form-actions").prepend(deny);
     $("#partial-new-comment-form-actions").prepend(approve);
 }
 
