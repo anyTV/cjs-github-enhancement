@@ -17,12 +17,12 @@ function cjs_update() {
     
     Array.from(document.querySelectorAll('.timeline-comment-wrapper .comment > .comment-content .edit-comment-hide > .comment-body')).forEach(function(e) {
         e.innerHTML = e.innerHTML.replace(/:AllenApproves:/g, '<img src="https://en.gravatar.com/userimage/101328657/c9adf0e5b944f4e03a13366d0df3140f.png?size=120">')
-        .replace(/:AllenNoLikey:/g, '<img src="https://cloud.githubusercontent.com/assets/3425521/13208640/d8f69c82-d955-11e5-9fc9-6f583603a076.png">');
+        .replace(/:AllenNoLikey:/g, '<img width=120 src="https://cloud.githubusercontent.com/assets/3425521/13208640/d8f69c82-d955-11e5-9fc9-6f583603a076.png">');
     });
 
     Array.from(document.querySelectorAll('.details .message blockquote p')).forEach(function(e) {
         e.innerHTML = e.innerHTML.replace(/:AllenApproves:/g, '<img src="https://en.gravatar.com/userimage/101328657/c9adf0e5b944f4e03a13366d0df3140f.png?size=120">')
-        .replace(/:AllenNoLikey:/g, '<img src="https://cloud.githubusercontent.com/assets/3425521/13208640/d8f69c82-d955-11e5-9fc9-6f583603a076.png">');
+        .replace(/:AllenNoLikey:/g, '<img width=120 src="https://cloud.githubusercontent.com/assets/3425521/13208640/d8f69c82-d955-11e5-9fc9-6f583603a076.png">');
     });
 
     appendAllen();
